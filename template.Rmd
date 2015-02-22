@@ -132,7 +132,7 @@ output_data <- data.frame(Top5Injuries=row.names(t_inj)[1:5],
                           Top5CropDamage=row.names(t_cro)[1:5],
                           CropDamage=t_cro[1:5,"CROPDMG"])
 #print the table
-kable(output_data)
+kable(output_data, format='html')
 ```
 
 
@@ -163,5 +163,5 @@ ggplot(time_result, aes(YEAR,CROPDMG,color=NAME)) +
 The full table of numbers for all categories in decreasing order according to the number of incidents is shown here.
 
 ```{r}
-kable(sum_data[order(sum_data$COUNT, decreasing=TRUE),])
+kable(sum_data[order(sum_data$COUNT, decreasing=TRUE),], format='html')
 ```

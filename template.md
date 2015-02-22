@@ -234,29 +234,188 @@ The full table of numbers for all categories in decreasing order according to th
 
 
 ```r
-kable(sum_data[order(sum_data$COUNT, decreasing=TRUE),])
+kable(sum_data[order(sum_data$COUNT, decreasing=TRUE),], format='html')
 ```
 
-                 COUNT   INJURIES   FATALITIES      PROPDMG     CROPDMG
--------------  -------  ---------  -----------  -----------  ----------
-WIND            273938       8172         1188   3134605.26   223939.84
-HAIL            228569       1066           40    699320.38   585956.66
-FLOOD            82731       8604         1525   2436131.51   364506.73
-TORNADO          25936      23371         1649   1391248.44   100029.27
-WINTER           19604       1891          278    151188.99     2498.99
-SNOW             17705       1166          169    152552.63     2195.72
-LIGHTNING        15776       5232          817    603710.28     3585.61
-RAIN             12241        305          114     59426.21    12923.10
-OTHER            10477       2382         1033    132982.08    23431.98
-FUNNEL CLOUD      6935          3            0       194.60        0.00
-FIRE              4240       1608           90    125223.29     9565.74
-WATERSPOUT        3861         72            6     10780.70        0.00
-BLIZZARD          2745        806          101     26023.48      172.00
-HEAT              2648       9224         3138      3232.86     1473.18
-DROUGHT           2512         19            6      4299.05    33954.40
-COLD              2463        320          451     15171.09     8934.79
-ICE               2195       2166          102     76353.02     1694.75
-FOG               1883       1077           81     17259.26        0.00
-LANDSLIDE          613         53           39     19117.94       37.00
-AVALANCHE          387        171          224      1628.90        0.00
-HURRICANE          288       1328          135     23757.25    10812.79
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> COUNT </th>
+   <th style="text-align:right;"> INJURIES </th>
+   <th style="text-align:right;"> FATALITIES </th>
+   <th style="text-align:right;"> PROPDMG </th>
+   <th style="text-align:right;"> CROPDMG </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> WIND </td>
+   <td style="text-align:right;"> 273938 </td>
+   <td style="text-align:right;"> 8172 </td>
+   <td style="text-align:right;"> 1188 </td>
+   <td style="text-align:right;"> 3134605.26 </td>
+   <td style="text-align:right;"> 223939.84 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HAIL </td>
+   <td style="text-align:right;"> 228569 </td>
+   <td style="text-align:right;"> 1066 </td>
+   <td style="text-align:right;"> 40 </td>
+   <td style="text-align:right;"> 699320.38 </td>
+   <td style="text-align:right;"> 585956.66 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FLOOD </td>
+   <td style="text-align:right;"> 82731 </td>
+   <td style="text-align:right;"> 8604 </td>
+   <td style="text-align:right;"> 1525 </td>
+   <td style="text-align:right;"> 2436131.51 </td>
+   <td style="text-align:right;"> 364506.73 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TORNADO </td>
+   <td style="text-align:right;"> 25936 </td>
+   <td style="text-align:right;"> 23371 </td>
+   <td style="text-align:right;"> 1649 </td>
+   <td style="text-align:right;"> 1391248.44 </td>
+   <td style="text-align:right;"> 100029.27 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WINTER </td>
+   <td style="text-align:right;"> 19604 </td>
+   <td style="text-align:right;"> 1891 </td>
+   <td style="text-align:right;"> 278 </td>
+   <td style="text-align:right;"> 151188.99 </td>
+   <td style="text-align:right;"> 2498.99 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SNOW </td>
+   <td style="text-align:right;"> 17705 </td>
+   <td style="text-align:right;"> 1166 </td>
+   <td style="text-align:right;"> 169 </td>
+   <td style="text-align:right;"> 152552.63 </td>
+   <td style="text-align:right;"> 2195.72 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LIGHTNING </td>
+   <td style="text-align:right;"> 15776 </td>
+   <td style="text-align:right;"> 5232 </td>
+   <td style="text-align:right;"> 817 </td>
+   <td style="text-align:right;"> 603710.28 </td>
+   <td style="text-align:right;"> 3585.61 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> RAIN </td>
+   <td style="text-align:right;"> 12241 </td>
+   <td style="text-align:right;"> 305 </td>
+   <td style="text-align:right;"> 114 </td>
+   <td style="text-align:right;"> 59426.21 </td>
+   <td style="text-align:right;"> 12923.10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:right;"> 10477 </td>
+   <td style="text-align:right;"> 2382 </td>
+   <td style="text-align:right;"> 1033 </td>
+   <td style="text-align:right;"> 132982.08 </td>
+   <td style="text-align:right;"> 23431.98 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FUNNEL CLOUD </td>
+   <td style="text-align:right;"> 6935 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 194.60 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FIRE </td>
+   <td style="text-align:right;"> 4240 </td>
+   <td style="text-align:right;"> 1608 </td>
+   <td style="text-align:right;"> 90 </td>
+   <td style="text-align:right;"> 125223.29 </td>
+   <td style="text-align:right;"> 9565.74 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WATERSPOUT </td>
+   <td style="text-align:right;"> 3861 </td>
+   <td style="text-align:right;"> 72 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 10780.70 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BLIZZARD </td>
+   <td style="text-align:right;"> 2745 </td>
+   <td style="text-align:right;"> 806 </td>
+   <td style="text-align:right;"> 101 </td>
+   <td style="text-align:right;"> 26023.48 </td>
+   <td style="text-align:right;"> 172.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HEAT </td>
+   <td style="text-align:right;"> 2648 </td>
+   <td style="text-align:right;"> 9224 </td>
+   <td style="text-align:right;"> 3138 </td>
+   <td style="text-align:right;"> 3232.86 </td>
+   <td style="text-align:right;"> 1473.18 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DROUGHT </td>
+   <td style="text-align:right;"> 2512 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 4299.05 </td>
+   <td style="text-align:right;"> 33954.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> COLD </td>
+   <td style="text-align:right;"> 2463 </td>
+   <td style="text-align:right;"> 320 </td>
+   <td style="text-align:right;"> 451 </td>
+   <td style="text-align:right;"> 15171.09 </td>
+   <td style="text-align:right;"> 8934.79 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ICE </td>
+   <td style="text-align:right;"> 2195 </td>
+   <td style="text-align:right;"> 2166 </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 76353.02 </td>
+   <td style="text-align:right;"> 1694.75 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FOG </td>
+   <td style="text-align:right;"> 1883 </td>
+   <td style="text-align:right;"> 1077 </td>
+   <td style="text-align:right;"> 81 </td>
+   <td style="text-align:right;"> 17259.26 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LANDSLIDE </td>
+   <td style="text-align:right;"> 613 </td>
+   <td style="text-align:right;"> 53 </td>
+   <td style="text-align:right;"> 39 </td>
+   <td style="text-align:right;"> 19117.94 </td>
+   <td style="text-align:right;"> 37.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AVALANCHE </td>
+   <td style="text-align:right;"> 387 </td>
+   <td style="text-align:right;"> 171 </td>
+   <td style="text-align:right;"> 224 </td>
+   <td style="text-align:right;"> 1628.90 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HURRICANE </td>
+   <td style="text-align:right;"> 288 </td>
+   <td style="text-align:right;"> 1328 </td>
+   <td style="text-align:right;"> 135 </td>
+   <td style="text-align:right;"> 23757.25 </td>
+   <td style="text-align:right;"> 10812.79 </td>
+  </tr>
+</tbody>
+</table>

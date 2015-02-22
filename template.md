@@ -121,18 +121,75 @@ output_data <- data.frame(Top5Injuries=row.names(t_inj)[1:5],
                           Top5CropDamage=row.names(t_cro)[1:5],
                           CropDamage=t_cro[1:5,"CROPDMG"])
 #print the table
-kable(output_data)
+kable(output_data, format='html')
 ```
 
-
-
-Top5Injuries    Injuries  Top5Fatalities    Fatalities  Top5PropertyDamage    PropertyDamage  Top5CropDamage    CropDamage
--------------  ---------  ---------------  -----------  -------------------  ---------------  ---------------  -----------
-TORNADO            23371  HEAT                    3138  WIND                       3134605.3  HAIL                585956.7
-HEAT                9224  TORNADO                 1649  FLOOD                      2436131.5  FLOOD               364506.7
-FLOOD               8604  FLOOD                   1525  TORNADO                    1391248.4  WIND                223939.8
-WIND                8172  WIND                    1188  HAIL                        699320.4  TORNADO             100029.3
-LIGHTNING           5232  OTHER                   1033  LIGHTNING                   603710.3  DROUGHT              33954.4
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Top5Injuries </th>
+   <th style="text-align:right;"> Injuries </th>
+   <th style="text-align:left;"> Top5Fatalities </th>
+   <th style="text-align:right;"> Fatalities </th>
+   <th style="text-align:left;"> Top5PropertyDamage </th>
+   <th style="text-align:right;"> PropertyDamage </th>
+   <th style="text-align:left;"> Top5CropDamage </th>
+   <th style="text-align:right;"> CropDamage </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> TORNADO </td>
+   <td style="text-align:right;"> 23371 </td>
+   <td style="text-align:left;"> HEAT </td>
+   <td style="text-align:right;"> 3138 </td>
+   <td style="text-align:left;"> WIND </td>
+   <td style="text-align:right;"> 3134605.3 </td>
+   <td style="text-align:left;"> HAIL </td>
+   <td style="text-align:right;"> 585956.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HEAT </td>
+   <td style="text-align:right;"> 9224 </td>
+   <td style="text-align:left;"> TORNADO </td>
+   <td style="text-align:right;"> 1649 </td>
+   <td style="text-align:left;"> FLOOD </td>
+   <td style="text-align:right;"> 2436131.5 </td>
+   <td style="text-align:left;"> FLOOD </td>
+   <td style="text-align:right;"> 364506.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FLOOD </td>
+   <td style="text-align:right;"> 8604 </td>
+   <td style="text-align:left;"> FLOOD </td>
+   <td style="text-align:right;"> 1525 </td>
+   <td style="text-align:left;"> TORNADO </td>
+   <td style="text-align:right;"> 1391248.4 </td>
+   <td style="text-align:left;"> WIND </td>
+   <td style="text-align:right;"> 223939.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WIND </td>
+   <td style="text-align:right;"> 8172 </td>
+   <td style="text-align:left;"> WIND </td>
+   <td style="text-align:right;"> 1188 </td>
+   <td style="text-align:left;"> HAIL </td>
+   <td style="text-align:right;"> 699320.4 </td>
+   <td style="text-align:left;"> TORNADO </td>
+   <td style="text-align:right;"> 100029.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LIGHTNING </td>
+   <td style="text-align:right;"> 5232 </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:right;"> 1033 </td>
+   <td style="text-align:left;"> LIGHTNING </td>
+   <td style="text-align:right;"> 603710.3 </td>
+   <td style="text-align:left;"> DROUGHT </td>
+   <td style="text-align:right;"> 33954.4 </td>
+  </tr>
+</tbody>
+</table>
 
 
 This set of plots shows the total sum of the four features of interest as a function of year between 1993 and 2011.  
